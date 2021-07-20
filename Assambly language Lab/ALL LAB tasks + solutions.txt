@@ -1,0 +1,37 @@
+    ;Lab Task: Write a program in assembly language that calculates the square of
+    ;six by adding six to the accumulator six times.
+
+
+[org 0x01000]
+add ax,6
+add ax,6
+add ax,6
+add ax,6
+add ax,6
+add ax,6
+mov ax, 0x4c00
+int 0x21
+
+=============================================================
+LAB Task 2
+	;Q Write a program to calculate the square of 20 by using a loop that adds 20 to the accumulator 20
+        ;times.
+        ;NOTE: You must use direct addressing.
+		
+[org 0x01000]
+jmp start
+result: dw 0
+start:
+mov ax,12
+mov cx,20
+l1:
+   add ax,20
+   sub cx,1
+   jnz l1
+
+mov [result],ax
+mov ax, 0x4c00
+int 0x21
+
+
+=================================================

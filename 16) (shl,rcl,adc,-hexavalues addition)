@@ -1,0 +1,29 @@
+[org 0x0100]     ;(shl,rcl,adc,-hexavalues addition)
+jump start
+
+num1: dw 0x40FF          ;40FF=16649    
+                          ;81FE=32278  
+destination: dw 0x40FF
+source: dw 0x1001
+
+start:
+
+    shl byte[num1],1         
+    rcl byte[num1+1],1      ;[num1+1] mean addition of 1 byte in ram mean from least significant to most significant (4400 -> from 00 to 44)
+    
+
+
+
+    ;addition
+
+
+xor ax,ax
+mov al, byte[source]     
+add byte[destination], al
+
+mov al, [source+1]
+adc byte[destination+1],al    ;[adc mean add through carry]
+
+
+mov ax, 0x4c00     
+int 0x21

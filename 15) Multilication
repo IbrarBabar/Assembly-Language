@@ -1,0 +1,29 @@
+               ;also see the hardfrom of multiplication on register
+[org 0x0100]    ;multilication
+jump start
+
+multiplicant: db 13  ; 4 bit number, save space of 8-bit numbers 
+multiplier: db 5    ; 4 bit number
+result: db 0         ; final result should be 8 bit
+
+ start:
+    mov cl, 4
+    mov bl, [multiplicant] ;total 8-bits., (first multiplicant 4 bits ma jay ga then shift hpty hoty 8 bits tk pohanch jay ga)
+    mov dl, [multiplier] ;4 bit ma jay ga and girty girty khatam ho jay ga
+
+
+    checkbit:
+    shr dl,1
+    jnc skip
+        add [result],bl
+
+
+    skip:
+    shl bl,1
+
+    dec cl
+    jne checkbit
+
+
+mov ax,0x4c00
+int 0x21

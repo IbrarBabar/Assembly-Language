@@ -3,4 +3,4 @@
   
   <br><br>
   
-  <h3>Also Assambly Language Lab Task Solution, Assignments, and Project (Stop Watch in Assambly Language) </h3>
+  <h3>Also Assambly Language <b>Lab Task Solution<b>, <b>Assignments, and Project (<b>Stop Watch in Assambly Language) </h3>

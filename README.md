@@ -3,4 +3,8 @@
   
   <br><br>
   
-  <h3>Also Assambly Language <b>Lab Task Solution<b>, <b>Assignments, and Project (<b>Stop Watch in Assambly Language) </h3>
+  <h3>Also Assambly Language Lab Folder includes </h3>
+  <h4> ---- Lab Task Solution ----<br>
+       ---- Assignments ----<br>
+       ---- Project (Stop Watch in Assambly Language)  ----<br>
+    
